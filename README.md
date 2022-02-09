@@ -1,7 +1,7 @@
 # nicehash_discord_webhook
 A simple python script that sends a discord webhook message when it detects issues with a Nicehash Rig
 
-Edit line 28-32 with your own information
+Edit line 28-31 with your own information
 
 Previews: 
 Error log
