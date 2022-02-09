@@ -89,7 +89,7 @@ while True:
         main_info = DiscordEmbed(title="All Information", color="ffec00" if active == str(devices) else "ff1000")
         main_info.set_author(
             name="Nicehash Webhook",
-            url="https://github.com/bssruhio",
+            url="https://github.com/bssruhio/nicehash_discord_webhook",
             icon_url="https://cdn.discordapp.com/attachments/940748623342370887/940782891590361169/Dd8kevy3_400x400.jpg",
         )
         main_info.set_thumbnail(url="https://cdn.discordapp.com/attachments/940748623342370887/940782891590361169/Dd8kevy3_400x400.jpg")
