@@ -23,14 +23,16 @@ def get_epoch_ms_from_now():
 
 #---------------------------------------------------------------------------------------------------------------------#
 # Nicehash Api Request
+# https://www.nicehash.com/my/settings/keys
+
+key = "key"
+secret = "secret"
+org_id = "organization id"
+webhook_url = "url
+
 is_offline = True
 while True:
     sleep(60 - time() % 60)
-    
-    # https://www.nicehash.com/my/settings/keys
-    key    = "key"
-    secret = "secret"
-    org_id = "organization id"
     
     xtime  = str(get_epoch_ms_from_now())
     xnonce = str(uuid.uuid4())
@@ -80,7 +82,7 @@ while True:
         #---------------------------------------------------------------------------------------------------------------------#
         # https://discord.com/api/webhooks/940748665994219662/tFl5UAKtQj9D0VWCJU14VhyWr1n8pZm8Zy8LMGkYH1GgF7KpeziOdGEoMXq7q6K05sEk
         # Creating Webhook
-        webhook = DiscordWebhook(url="https://discord.com/api/webhooks/940748665994219662/tFl5UAKtQj9D0VWCJU14VhyWr1n8pZm8Zy8LMGkYH1GgF7KpeziOdGEoMXq7q6K05sEk", 
+        webhook = DiscordWebhook(url=webhook_url, 
                                 username="Miner Manager")
         #---------------------------------------------------------------------------------------------------------------------#
         # Create First Embed
