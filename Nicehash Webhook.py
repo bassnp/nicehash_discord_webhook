@@ -80,7 +80,6 @@ while True:
         rigs = data["miningRigs"]
 
         #---------------------------------------------------------------------------------------------------------------------#
-        # https://discord.com/api/webhooks/940748665994219662/tFl5UAKtQj9D0VWCJU14VhyWr1n8pZm8Zy8LMGkYH1GgF7KpeziOdGEoMXq7q6K05sEk
         # Creating Webhook
         webhook = DiscordWebhook(url=webhook_url, 
                                 username="Miner Manager")
@@ -90,9 +89,9 @@ while True:
         main_info.set_author(
             name="Nicehash Webhook",
             url="https://github.com/bssruhio/nicehash_discord_webhook",
-            icon_url="https://cdn.discordapp.com/attachments/940748623342370887/940782891590361169/Dd8kevy3_400x400.jpg",
+            icon_url=" ",
         )
-        main_info.set_thumbnail(url="https://cdn.discordapp.com/attachments/940748623342370887/940782891590361169/Dd8kevy3_400x400.jpg")
+        main_info.set_thumbnail(url=" ")
         main_info.set_footer(text="made by not.bass#3945")
         main_info.set_timestamp()
 
@@ -116,7 +115,6 @@ while True:
         else:
             for rig in rigs:
                 rig_info = DiscordEmbed(title=rig["name"], color="ff1000" if (rig["minerStatus"] == "OFFLINE" or rig["minerStatus"] == "STOPPED") else "37ff21")
-                #rig_info.set_thumbnail(url="https://cdn.discordapp.com/attachments/940748623342370887/940782891590361169/Dd8kevy3_400x400.jpg")
                 rig_info.add_embed_field(name="Status", value=rig["minerStatus"], inline=True)
                 rig_info.add_embed_field(name="Local",  value=str(rig["localProfitability"])[0:10] + " BTC", inline=True)
                 rig_info.add_embed_field(name="Actual", value=str(rig["profitability"])[0:10] + " BTC", inline=True)
